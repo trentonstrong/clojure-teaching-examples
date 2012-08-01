@@ -14,6 +14,7 @@ Questions:
 Answer Guide:
 
 1. Imperative Style (Python) (*Note: This is only an example, not idiomatic Python which would be functional)
+
 ```python
 def count_greater_100(sequence):
     count = 0
