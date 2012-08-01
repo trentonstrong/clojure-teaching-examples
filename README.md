@@ -29,9 +29,19 @@ def count_greater_than_100(sequence):
 ```clojure
 (defn count-greather-than-100
   [sequence]
-  (count (filter (fn [x] (> x 100)))))
+  (count (filter #(> % 100) sequence)))
 ```
 
+3. 
+  1. composition of pure functions does not require handling mutable variable.  
+  2. if count mutable variable was in a shared context it's not safe for concurrent access.
+  3. functional version can be written so as to be re-usable with any predicate, not just x > 100 such as:
+
+```clojure
+(defn count-where
+  [pred seq]
+  (count (filter pred seq)))
+```
 
 
 
