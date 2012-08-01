@@ -23,7 +23,6 @@ def count_greater_than_100(sequence):
             count = count + 1
     return count
 ```
-
 2. Functional approach using filter
 
 ```clojure
@@ -31,7 +30,6 @@ def count_greater_than_100(sequence):
   [sequence]
   (count (filter #(> % 100) sequence)))
 ```
-
 3. 
   1. composition of pure functions does not require handling mutable variable.  
   2. if count mutable variable was in a shared context it's not safe for concurrent access.
