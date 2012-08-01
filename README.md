@@ -16,12 +16,20 @@ Answer Guide:
 1. Imperative Style (Python) (*Note: This is only an example, not idiomatic Python which would be functional)
 
 ```python
-def count_greater_100(sequence):
+def count_greater_than_100(sequence):
     count = 0
     for x in sequence:
         if x > 100:
             count = count + 1
     return count
+```
+
+2. Functional approach using filter
+
+```clojure
+(defn count-greather-than-100
+  [sequence]
+  (count (filter (fn [x] (> x 100)))))
 ```
 
 
